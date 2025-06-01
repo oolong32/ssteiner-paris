@@ -1,1 +1,13 @@
-Title: Site Title
+Title: Agence de Voyage
+
+----
+
+Insta: @fooBar
+
+----
+
+Foo: Foo
+
+----
+
+Bar: Bar

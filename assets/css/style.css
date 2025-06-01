@@ -1,0 +1,42 @@
+:root {
+  font-size: 100%;
+  line-height: 1.3;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* font-family: sans-serif; */
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+footer { margin-top: auto; }
+
+img {
+  width: 100%;
+}
+.project-preview { margin-bottom: 2rem; }
+
+.project-preview h1 {
+  margin: 0;
+}
+.project-preview p {
+  margin: 0 0 0.5rem 0;
+}
+.project-preview figure {
+  margin: 0;
+}
+
+/* Links */
+
+a.unstyled-link {
+  text-decoration: none;
+  color: unset;
+}
+
+/* End Links */
