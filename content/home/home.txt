@@ -2,7 +2,12 @@ Title: Home
 
 ----
 
-Text: Dieser Text könnte auf der Homepage abgebildet werden. Im Moment hat er keine Bedeutung.
+Text:
+
+66, Bd de Strasbourg
+75010 Paris
+
+Open by appointment
 
 ----
 

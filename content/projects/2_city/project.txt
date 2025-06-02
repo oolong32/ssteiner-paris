@@ -10,18 +10,19 @@ Enddate: 2025-05-31
 
 ----
 
-Artists: Stefano Faoro, Birgit Megerle
+Artists: Stefano Faoro & Birgit Megerle
 
 ----
 
-Text:
+Additionalinfo: with a text by Graham Hamilton
 
-Lorem ipsum dolor sit amet, **consectetuer adipiscing** elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis *natoque penatibus* et magnis dis parturient montes, nascetur ridiculus mus. 
+----
 
-Hier auch Listen möglich:
-- Hello World
-- Foo Bar
-- Ein (link: https://de.wikipedia.org/wiki/Igel text: Link auf en Igel-Eintrag bei Wikipedia)
+Photocredits: Photography by XYZ
+
+----
+
+Text: Hier braucht es kein Text-Eingabefeld, sondern nur Auflistung PDF, dort dafür mit Möglichkeit, Ankertext selber zu texten.
 
 ----
 

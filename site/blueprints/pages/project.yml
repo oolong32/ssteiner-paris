@@ -14,9 +14,12 @@ columns:
             type: date
           artists:
             type: text
-          text:
-            label: Description
-            type: textarea
+          additionalinfo:
+            label: Additional Information (optional)
+            type: text
+          photocredits:
+            label: Photography Credits (optional)
+            type: text
   - width: 1/2
     sections:
       pdfs:

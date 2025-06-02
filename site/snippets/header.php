@@ -11,9 +11,9 @@
 
 <body>
   <header>
-    <h1>
-      <a class="unstyled-link" href="<?= $site->url() ?>"><?= $site->title() ?></a>
-    </h1>
+    <a class="unstyled-link" href="<?= $site->url() ?>">
+      <img src="/assets/img/logo.jpg" style="width: 180px" alt="">
+    </a>
+    <!-- <?= $site->title() ?> -->
 
-    <?php snippet('nav') ?>
   </header>

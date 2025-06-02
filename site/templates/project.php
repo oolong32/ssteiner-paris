@@ -1,18 +1,21 @@
 <?php snippet('header') ?>
 
+<strong>hier kein Logo!</strong>
+
 <main>
   <article class="project">
   <section class="project-description">
-    <small><?= $startDate . '–' . $endDate ?></small>
     <h1><?= $page->title()->html() ?></h1>
-    <?= $page->text()->kirbytext() ?>
+    <p class="project-artists"><strong><?= $page->artists()->html() ?></strong></p>
+    <p class="additional-info"><?= $page->additionalinfo() ?></p>
+    <p class="date"><?= $startDate . '–' . $endDate ?></p>
+
   </section>
 
   <?php if ($files) : ?>
     <!-- display downloads -->
     <section class="downloads">
-      <h2>Downloads</h2>
-      <ul class="downloads-list">
+      <ul class="downloads-list unstyled-list">
       <?php foreach ($files as $file) : ?>
         <li>
           <a href="<?= $file->url() ?>"><?= $file->name() ?></a>
@@ -23,6 +26,9 @@
   <?php endif ?>
 
   <?php if ($images) : ?>
+
+    <p class="photo-credits"><?= $page->photocredits() ?></p>
+
     <!-- display images -->
     <section class="images">
     <?php foreach ($images as $image) : ?>
