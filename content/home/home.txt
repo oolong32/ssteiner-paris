@@ -2,13 +2,7 @@ Title: Home
 
 ----
 
-Text:
-
-Hier Text neue Gallerie in Paris.
-
-hello world
-
-asdf
+Text: Dieser Text könnte auf der Homepage abgebildet werden. Im Moment hat er keine Bedeutung.
 
 ----
 
