@@ -1,6 +1,4 @@
-<?php snippet('header') ?>
-
-<strong>hier kein Logo!</strong>
+<?php snippet('header', ['nologo' => true,]) ?>
 
 <main>
   <article class="project">
@@ -8,17 +6,18 @@
     <h1><?= $page->title()->html() ?></h1>
     <p class="project-artists"><strong><?= $page->artists()->html() ?></strong></p>
     <p class="additional-info"><?= $page->additionalinfo() ?></p>
-    <p class="date"><?= $startDate . '–' . $endDate ?></p>
+    <p class="date"><?= $page->date() ?></p>
 
   </section>
 
-  <?php if ($files) : ?>
+  <?php if ($documents) : ?>
     <!-- display downloads -->
     <section class="downloads">
       <ul class="downloads-list unstyled-list">
-      <?php foreach ($files as $file) : ?>
+      <?php foreach ($documents as $document) : ?>
         <li>
-          <a href="<?= $file->url() ?>"><?= $file->name() ?></a>
+          <?php $text = ('' != $document->linktext()) ? $document->linktext() : $document->name() ?>
+          <a href="<?= $document->url() ?>"><?= $text ?></a>
         </li>
       <?php endforeach ?>
       </ul>
@@ -33,7 +32,14 @@
     <section class="images">
     <?php foreach ($images as $image) : ?>
       <figure class="image-container">
-        <img src="<?= $image->url() ?>" alt="<?= $altText ?>">
+
+        <?php $imageAlt = $image->alt();
+        $alttext = ($imageAlt  != '') ? $imageAlt : $defaultAlt;
+        ?>
+        <img src="<?= $image->url() ?>" alt="<?= $alttext ?>">
+        <?php if ( $image->caption() != '' ) : ?>
+          <figcaption><?= $image->caption() ?></figcaption>
+        <?php endif ?>
       </figure>
     <?php endforeach ?>
     </section>

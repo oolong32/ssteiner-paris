@@ -6,6 +6,7 @@ Text:
 
 66, Bd de Strasbourg
 75010 Paris
+(email: info@agencedevoyages.org)
 
 Open by appointment
 

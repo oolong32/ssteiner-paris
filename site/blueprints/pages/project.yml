@@ -6,12 +6,9 @@ columns:
       info:
         type: fields
         fields:
-          startdate:
-            label: Start Date
-            type: date
-          enddate:
-            label: End Date
-            type: date
+          date:
+            label: Date
+            type: text
           artists:
             type: text
           additionalinfo:
@@ -22,14 +19,30 @@ columns:
             type: text
   - width: 1/2
     sections:
-      pdfs:
-        label: PDF
-        query: page.documents
+      previewimg:
+        label: Preview Image for Homepage (optional)
+        type: files
+        template: previewimg
+        layout: list
+        sortable: false
+        max: 1
+      projecttexts:
+        label: Project Texts (PDF)
+        icon: document
+        info: "{{ file.linktext }}"
+        back: white
+        template: projecttexts
         type: files
         layout: list
-      images:
-        query: page.images
+        sortable: true
+        empty: No documents yet
+      projectimages:
+        label: Project Images (JPG, PNG, GIF)
+        info: "{{ file.caption }}"
+        template: projectimages
         type: files
         layout: cards
+        empty: No images yet
+        sortable: true
         image:
           ratio: 1/1

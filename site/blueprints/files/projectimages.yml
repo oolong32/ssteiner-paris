@@ -1,0 +1,26 @@
+title: Project Image
+
+columns:
+  main:
+    width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          caption:
+            label: Caption (optional)
+            type: text
+  sidebar:
+      width: 1/2
+      sections:
+        meta:
+          type: fields
+          fields:
+            alt:
+              label: Alt-Text (for SEO/Accessibility)
+              type: text
+
+accept:
+  mime: image/*
+  type: image
+focus: false

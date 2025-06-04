@@ -14,15 +14,17 @@
             <h1 class="project-title"><?= $project->title()->html() ?></h1>
             <p class="artists"><strong><?= $project->artists() ?></strong></p>
             <p style="margin: 0;"><?= $project->additionalinfo()  ?></p>
-            <p style="margin: 0;"><?= $project->startdate()->toDate('d.m.Y') ?>–<?= $project->enddate()->toDate('d.m.Y') ?></p>
+            <p style="margin: 0;"><?= $project->date() ?></p>
 
             <p class="project-artist"></p>
             <p class="project-preview-text"></p>
 
-            <?php if ($image = $project->images()->first()): ?>
-            <!-- display fisrt project image -->
+            <?php if ($image = $project->files()->filterBy('template', 'previewimg')->first() ) : ?>
+
+            <!-- display preview image -->
             <figure class="project-preview-image">
-              <img src="<?= $image->url() ?>" alt="<?= $project->title() ?>">
+              <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?? $project->title() ?>">
+            <figcaption><?= $image->caption() ?? '' ?></figcaption>
             </figure>
             <?php endif ?>
           </a>

@@ -3,8 +3,12 @@ title: Projects
 sections:
   projects:
     type: pages
+    info: "{{ page.date }}"
+    sortable: true
     layout: cards
     image:
       ratio: 4/6
       cover: true
     template: project
+    empty: No projects yet
+    help: Don’t forget to set the project to ‘public’ once it’s ready. 🚀

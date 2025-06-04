@@ -100,10 +100,12 @@ margin: 0;
 }
 
 /* Links */
+a {
+  color: unset;
+}
 
 a.unstyled-link {
   text-decoration: none;
-  color: unset;
 }
 
 /* End Links */
@@ -113,11 +115,25 @@ a.unstyled-link {
     /* width: 60vw; */
   }
   .project-preview img {
-    /* width: 50vw; */
+    width: 50vw;
   }
 
   /* Project Page */
   .project .project-description {
     /* width: 60vw; */
+  }
+
+  .project .images figure {
+    display: inline-block;
+  }
+  .project .images {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .images figure img {
+    max-width: 800px;
   }
 }

@@ -10,10 +10,13 @@
 </head>
 
 <body>
-  <header>
-    <a class="unstyled-link" href="<?= $site->url() ?>">
-      <img src="/assets/img/logo.jpg" style="width: 180px" alt="">
-    </a>
-    <!-- <?= $site->title() ?> -->
-
-  </header>
+  <?php if (isset($nologo)) : ?>
+    <!-- no header on this page -->
+  <?php else: ?>
+    <header>
+      <a class="unstyled-link" href="<?= $site->url() ?>">
+        <img src="/assets/img/logo.jpg" style="width: 180px" alt="">
+      </a>
+    <h1 style="position:absolute;top:-10rem;"> <?= $site->title() ?> </h1>
+    </header>
+  <?php endif ?>

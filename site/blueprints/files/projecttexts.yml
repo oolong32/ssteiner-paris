@@ -1,0 +1,10 @@
+title: Project Text
+
+fields:
+  linktext:
+    label: Link Text
+    type: text
+
+image: false
+accept:
+  mime: application/pdf
