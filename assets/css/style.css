@@ -71,10 +71,6 @@ margin: 0;
 }
 
 /* Project Page */
-.project a {
-  color: black;
-}
-
 .project .project-description,
 .project .additional-info,
 .project .project-artists,
@@ -100,8 +96,8 @@ margin: 0;
 }
 
 /* Links */
-a {
-  color: unset;
+a, a:link, a:visited, a:hover {
+  color: black;
 }
 
 a.unstyled-link {
