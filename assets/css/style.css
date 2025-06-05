@@ -107,7 +107,7 @@ a.unstyled-link {
 /* End Links */
 
 @media (min-width: 700px) {
-  .project-preview img { width: 25vw; }
+  .project-preview img { width: 45vw; }
 
   /* Project Page */
   .project .project-description {
@@ -125,6 +125,6 @@ a.unstyled-link {
   }
 
   .project .images figure img {
-    max-width: 500px;
+    max-width: 700px;
   }
 }
