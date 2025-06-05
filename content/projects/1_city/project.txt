@@ -1,8 +1,8 @@
-Title: City
+Title: CITY
 
 ----
 
-Date: 10.05.–31.05.2025
+Date: 10.05. – 31.05.2025
 
 ----
 
@@ -14,7 +14,7 @@ Additionalinfo: with a text by Graham Hamilton
 
 ----
 
-Photocredits: Photography by XYZ
+Photocredits: Photography by Simon Rao
 
 ----
 

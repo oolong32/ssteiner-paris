@@ -1,4 +1,4 @@
-Linktext: text
+Linktext: Text
 
 ----
 
