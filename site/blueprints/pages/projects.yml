@@ -7,6 +7,7 @@ sections:
     sortable: true
     layout: cards
     image:
+      query: page.images.findBy("template", "previewimg")
       ratio: 4/6
       cover: true
     template: project

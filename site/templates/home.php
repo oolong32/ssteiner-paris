@@ -23,7 +23,11 @@
 
             <!-- display preview image -->
             <figure class="project-preview-image">
-              <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?? $project->title() ?>">
+              <?php $portrait = $image->dimensions()->portrait() ?? false; ?>
+              <img
+                class="<?= $portrait ? 'portrait' : 'landscape' ?>"
+                src="<?= $image->url() ?>"
+                alt="<?= $image->alt() ?? $project->title() ?>">
             <figcaption><?= $image->caption() ?? '' ?></figcaption>
             </figure>
             <?php endif ?>

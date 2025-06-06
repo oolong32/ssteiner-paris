@@ -35,8 +35,12 @@
 
         <?php $imageAlt = $image->alt();
         $alttext = ($imageAlt  != '') ? $imageAlt : $defaultAlt;
+        $portrait = $image->dimensions()->portrait() ?? false;
         ?>
-        <img src="<?= $image->url() ?>" alt="<?= $alttext ?>">
+        <img
+        class="<?= $portrait ? 'portrait' : 'landscape' ?>"
+        src="<?= $image->url() ?>"
+        alt="<?= $alttext ?>">
         <?php if ( $image->caption() != '' ) : ?>
           <figcaption><?= $image->caption() ?></figcaption>
         <?php endif ?>
