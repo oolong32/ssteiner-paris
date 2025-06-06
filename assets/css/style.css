@@ -107,7 +107,7 @@ a.unstyled-link {
 /* End Links */
 
 @media (min-width: 700px) {
-  .project-preview img { width: 45vw; }
+  .project-preview img { width: 35vw; }
 
   /* Project Page */
   .project .project-description {
@@ -124,7 +124,10 @@ a.unstyled-link {
     align-items: center;
   }
 
-  .project .images figure img {
-    max-width: 700px;
+  .project .images figure img.portrait {
+    max-width: 500px;
+  }
+  .project .images figure img.landscape {
+    max-width: 900px;
   }
 }
