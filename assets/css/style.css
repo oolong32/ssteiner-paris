@@ -125,9 +125,9 @@ a.unstyled-link {
   }
 
   .project .images figure img.portrait {
-    max-width: 500px;
+    max-width: 530px;
   }
   .project .images figure img.landscape {
-    max-width: 900px;
+    max-width: 1100px;
   }
 }
