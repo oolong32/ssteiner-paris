@@ -107,7 +107,7 @@ a.unstyled-link {
 /* End Links */
 
 @media (min-width: 700px) {
-  .project-preview img { width: 35vw; }
+  .project-preview img { width: 24vw; }
 
   /* Project Page */
   .project .project-description {
