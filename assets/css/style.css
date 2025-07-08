@@ -113,7 +113,7 @@ a.unstyled-link {
 
   /* Project Page */
   .project .project-description {
-    /* width: 60vw; */
+    width: 60vw;
   }
 
   .project .images figure {
