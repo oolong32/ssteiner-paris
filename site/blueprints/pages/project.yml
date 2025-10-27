@@ -41,6 +41,7 @@ columns:
         info: "{{ file.caption }}"
         template: projectimages
         type: files
+        limit: 1000
         layout: cards
         empty: No images yet
         sortable: true
