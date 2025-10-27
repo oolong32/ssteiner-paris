@@ -1,3 +1,7 @@
+Linktext: floor plan
+
+----
+
 Sort: 4
 
 ----
