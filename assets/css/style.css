@@ -40,6 +40,20 @@ footer {
   margin-top: auto;
 }
 
+/* Newsletter Signup */
+
+.newsletter-signup {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem 0.5rem 0.5rem ;
+  background: white;
+}
+
+/* End Newsletter Signup */
+
+
 img {
   width: 80vw;
 }
@@ -94,6 +108,7 @@ margin: 0;
   font-style: italic;
   margin-bottom: 0;
 }
+
 
 /* Links */
 a, a:link, a:visited, a:hover {
