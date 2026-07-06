@@ -99,6 +99,14 @@ class App
 	{
 		$this->core = new Core($this);
 
+		// start with fresh permission caches
+		File::$accessibleCache = [];
+		File::$listableCache   = [];
+		File::$readableCache   = [];
+		Page::$accessibleCache = [];
+		Page::$listableCache   = [];
+		Page::$readableCache   = [];
+
 		// register all roots to be able to load stuff afterwards
 		$this->bakeRoots($props['roots'] ?? []);
 
@@ -1194,7 +1202,7 @@ class App
 		string|null $path = null,
 		string|null $method = null
 	): Response|null {
-		if (($_ENV['KIRBY_RENDER'] ?? true) === false) {
+		if ((filter_var($_ENV['KIRBY_RENDER'] ?? true, FILTER_VALIDATE_BOOLEAN)) === false) {
 			return null;
 		}
 
@@ -1257,7 +1265,7 @@ class App
 		// search for a draft if the page cannot be found
 		if (!$page && $draft = $site->draft($path)) {
 			if (
-				$this->user() ||
+				($this->user() && $draft->isAccessible()) ||
 				$draft->isVerified($this->request()->get('token'))
 			) {
 				$page = $draft;
@@ -1302,11 +1310,47 @@ class App
 
 		// try to resolve image urls for pages and drafts
 		if ($page = $site->findPageOrDraft($id)) {
-			return $page->file($filename);
+			// don't leak files on draft pages through clean URLs:
+			// only serve them to an authenticated user with access
+			// permission or a request with a valid preview token
+			if (
+				$page->isDraft() === true &&
+				($this->user() && $page->isAccessible()) === false &&
+				$page->isVerified($this->request()->get('token')) === false
+			) {
+				return null;
+			}
+
+			return $this->resolveFile($page->file($filename));
 		}
 
 		// try to resolve site files at least
-		return $site->file($filename);
+		return $this->resolveFile($site->file($filename));
+	}
+
+	/**
+	 * Filters a resolved file object using the configuration
+	 * @internal
+	 */
+	public function resolveFile(File|null $file): File|null
+	{
+		// shortcut for files that don't exist
+		if ($file === null) {
+			return null;
+		}
+
+		$option = $this->option('content.fileRedirects', true);
+
+		if ($option === true) {
+			return $file;
+		}
+
+		if ($option instanceof Closure) {
+			return $option($file) === true ? $file : null;
+		}
+
+		// option was set to `false` or an invalid value
+		return null;
 	}
 
 	/**

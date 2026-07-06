@@ -49,6 +49,14 @@ Icon
 
 /site/config/.license
 
+# Kirby
+
+/kirby
+
+# composer
+/vendor
+
+
 .swp
 .swo
 env
