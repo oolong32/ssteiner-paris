@@ -46,7 +46,7 @@
 
         <!-- Allgemeiner API-Fehler -->
         <?php if (isset($errors['api'])): ?>
-            <p class="error"><?= $errors['api'] ?></p>
+            <p class="error"><?= implode(', ', $errors['api']) ?></p>
         <?php endif; ?>
     <?php endif; ?>
 </form>
