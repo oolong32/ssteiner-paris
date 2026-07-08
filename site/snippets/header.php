@@ -9,7 +9,7 @@
   <?= css('/assets/css/style.css') ?>
 </head>
 
-<body>
+<body class="<?= $page->slug() ?>">
   <?php if (isset($nologo)) : ?>
     <!-- no header on this page -->
   <?php else: ?>

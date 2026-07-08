@@ -1,6 +1,6 @@
   <footer>
     <section class="newsletter-signup">
-      <a href="/foo">subscribe to our newsletter</a>
+      <a href="/newsletter">subscribe to our newsletter</a>
     </section>
   </footer>
 </body>

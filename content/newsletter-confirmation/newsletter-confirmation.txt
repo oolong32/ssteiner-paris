@@ -1,6 +1,0 @@
-Title: Newsletter Confirmation
-
-----
-
-Text: Afin de vérifier que vous êtes bien à l'origine de cette demande, merci de consulter votre boîte de réception pour confirmer votre abonnement.
-

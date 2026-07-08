@@ -43,13 +43,29 @@ footer {
 /* Newsletter Signup */
 
 .newsletter-signup {
-  display: inline-block;
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0;
   padding: 0.5rem 0.75rem 0.5rem 0.5rem ;
   background: white;
 }
+.home .newsletter-signup {
+  display: inline-block;
+}
+
+/* Newsletter Form */
+
+.newsletter-form {}
+.newsletter-form section {
+  margin-bottom: 1rem; 
+}
+.newsletter-form label { font-size: 0.875rem; }
+
+.newsletter-form label input {
+}
+
+.newsletter-form button { margin-top: 0.25rem; }
 
 /* End Newsletter Signup */
 
