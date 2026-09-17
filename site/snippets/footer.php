@@ -1,5 +1,5 @@
   <footer>
-    <section class="newsletter-signup" style="display: none;">
+    <section class="newsletter-signup">
       <a href="/newsletter">subscribe to our newsletter</a>
     </section>
   </footer>
